@@ -9,11 +9,19 @@
 <body>
   <header>
     <h1>📁 Meus Arquivos</h1>
-    <p>Armazenamento pessoal - acesso rápido aos meus conteúdos</p>
+    <p>Armazenamento pessoal - Acesso rápido aos meus conteúdos</p>
   </header>
 
+  <div class="tab-container">
+    <!-- Abas para alternar entre as seções -->
+    <button class="tab-button" onclick="openTab('notas')">📝 Notas</button>
+    <button class="tab-button" onclick="openTab('imagens')">📷 Imagens</button>
+    <button class="tab-button" onclick="openTab('links')">🔗 Links Úteis</button>
+  </div>
+
   <main>
-    <section>
+    <!-- Seções que são alternadas -->
+    <section id="notas" class="tab-content">
       <h2>📝 Notas</h2>
       <ul>
         <li><a href="notas/anotacao1.txt" target="_blank">Anotação 1</a></li>
@@ -21,15 +29,15 @@
       </ul>
     </section>
 
-    <section>
+    <section id="imagens" class="tab-content" style="display: none;">
       <h2>📷 Imagens</h2>
       <ul>
         <li><a href="imag" target="_blank">Foto 1</a></li>
-        <li><a href="imag" target="_blank">Foto 1</a></li>
+        <li><a href="imag" target="_blank">Foto 2</a></li>
       </ul>
     </section>
 
-    <section>
+    <section id="links" class="tab-content" style="display: none;">
       <h2>🔗 Links Úteis</h2>
       <ul>
         <li><a href="https://github.com" target="_blank">GitHub</a></li>
@@ -41,5 +49,7 @@
   <footer>
     <p>Feito por mim © 2025</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
